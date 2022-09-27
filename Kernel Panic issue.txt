@@ -18,6 +18,36 @@
        3-2.  다시 WEB VM에 디스크를 붙인 후 직렬포트 통하여 부팅 에러 확인
          직렬포트 명령어
           -gcloud compute --project=프로젝트명-번호 instances get-serial-port-output 프로젝트명--zone=asia-northeast3-a --port=1
+        (정확한 커널패닉 로그가 남지 않아 실패)
+
+    *Disk Mount
+       #디스크 목록 확인
+            sudo fdisk -l 
+       #디스크 디렉토리 생성
+            sudo mkdir /mnt/storage1 
+       #디스크 마운트
+            sudo mount -t /dev/{디스크이름} /mnt/storage1
+       #디스크 마운트 확인
+            sudo df -h
+       #마운트 강제 해제
+            sudo umount -l /dev/{디스크이름}
+       #디스크 디렉토리 삭제
+            sudo rmdir /mnt/storage1
+
+
+   4. 운영 웹서버 부팅 디스크를 이미지화 시킨 후 개발 VM에 장착 ( 이미지 가져오기 실패..)
+
+   5. 2021년 말에 인프라 구성을 완료하고 남겨놓은 부팅디스크 이미지 발견!
+      5-1. 이미지 복사 후 VM 장착
+      5-2. 3번 항목 내용을 활용하여 예전 디스크를 마운트 시킴 
+      5-3. 설정 파일 및 프로젝트 cp
+      5-4. nginx 가동
+       issue. nginx가 제대로 install 되있지 않은 상황이라 lb health check(80port) 요청이 제대로 안들어옴
+               원인을 확인해보니 nginx를 구동해도 80port not running
+      5-5. apt update 후 nginx install
+      5-6. 복구 완료
+
+ 
 
     
  
