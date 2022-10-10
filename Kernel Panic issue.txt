@@ -1,5 +1,5 @@
 # GCP Compute engine VM Kernel Panic issue
-
+ 
 * 환경
   -  VM OS : Linux gw-was-dev-1 5.15.0-1013-gcp #18~20.04.1-Ubuntu SMP Sun Jul 3 08:20:07 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
   
