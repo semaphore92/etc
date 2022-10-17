@@ -1,0 +1,32 @@
+** 공통 (redhat centos 8.6)
+    * 운영체제 정보 확인
+        - uname -a
+        - cat /etc/issue
+        - cat /etc/redhat-release
+   
+    * git 설치 
+        - yum install -y git
+          
+        1. git config --global user.name semaphore92
+        2. git config --global user.email swheo92@gmail.com
+        3. git config --global color.ui "auto"
+       
+     git clone https://github.com/semaphore92/Project-TOS-api.git 
+
+** postgresql 명령어
+    - psql -V (버전확인)
+    - psql -U postgres (psql 접속 방법)
+    - CREATE DATABASE {DB명} (DB 생성)
+
+
+** Spring Boot Jar 파일 실행
+    - java -jar {jar파일명}
+
+
+** docker 명령어
+    - docker version (버전확인)
+
+    - docker build -t {이미지파일명} . (DockerFile로 이미지 빌드하기)
+
+** 파일 소유권 변경
+    - chown root:root {파일경로}
