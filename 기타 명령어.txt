@@ -13,11 +13,38 @@
        
      git clone https://github.com/semaphore92/Project-TOS-api.git 
 
+    * pull 명령어
+        - git fetch --all
+        - git reset --hard origin/master
+        -git pull origin master
+
 ** postgresql 명령어
     - psql -V (버전확인)
     - psql -U postgres (psql 접속 방법)
     - CREATE DATABASE {DB명} (DB 생성)
 
+
+** gradle 명령어
+
+    ** 설치 명령어
+       - yum install wget
+       - wget https://services.gradle.org/distributions/gradle-7.5-bin.zip
+       - mkdir /opt/gradle
+       - yum install unzip (unzip 없을 경우)
+       - unzip -d /opt/gradle gradle-7.5-bin.zip
+       - vi /etc/profile.d/gradle.sh 생성
+            export GRADLE_HOME=/opt/gradle/gradle-7.5
+	    export PATH=${GRADLE_HOME}/bin:${PATH}
+       - chmod +x /etc/profile.d/gradle.sh
+       - source /etc/profile.d/gradle.sh
+       - gradle -v
+                              
+    ** gradlew 생성
+       - gradle init
+       - gradle wrapper
+
+    ** 배포 명령어
+        - gradlew build
 
 ** Spring Boot Jar 파일 실행
     - java -jar {jar파일명}
@@ -30,3 +57,6 @@
 
 ** 파일 소유권 변경
     - chown root:root {파일경로}
+
+
+https://github.com/KyeonghoYoo/spring-boot-docker
