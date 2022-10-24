@@ -3,6 +3,10 @@
         - uname -a
         - cat /etc/issue
         - cat /etc/redhat-release
+
+    * 리눅스 로컬서버 열린 포트 확인 
+        - netstat - tnlp
+       
    
     * git 설치 
         - yum install -y git
@@ -16,7 +20,7 @@
     * pull 명령어
         - git fetch --all
         - git reset --hard origin/master
-        -git pull origin master
+        - git pull origin master
 
 ** postgresql 명령어
     - psql -V (버전확인)
@@ -42,6 +46,7 @@
     ** gradlew 생성
        - gradle init
        - gradle wrapper
+       - chmod +x gradlew
 
     ** 배포 명령어
         - gradlew build
@@ -53,7 +58,12 @@
 ** docker 명령어
     - docker version (버전확인)
 
-    - docker build -t {이미지파일명} . (DockerFile로 이미지 빌드하기)
+    - docker build -t {이미지파일명} .       (DockerFile로 이미지 빌드하기)
+
+    - docker images                          ( Docker 이미지 확인)
+    - docker ps                                ( Docker 컨테이너 확인)
+    - docker container stop [컨테이너ID 3자리]   (Docker 컨테이너 중지)
+    - docker container rm [이미지 ID 3자리]
 
 ** 파일 소유권 변경
     - chown root:root {파일경로}
