@@ -1,0 +1,34 @@
+build.gradle
+
+build.gradle은 파일 자체가 Project 오브젝트로, Project 인터페이스를 구현하는 구현체이다.
+Project 오브젝트는 Project 단위에서 필요한 작업을 수행하기 위해 모든 메서드와 프로퍼티를 모아 놓은 슈퍼 객체이다.
+
+
+public interface Project extends Comparable<Project>, ExtensionAware, PluginAware {
+
+}
+
+우리가 bukld.gradle에 작성하는 수많은 코드들은 모두 Project 오브젝트의 프로퍼티와 메서드가 된다.
+Project 오브젝트는 내부에 수많은 메서드와 속성을 가지고 있다. 
+메서드 중 대표적인 것은 java applicaiton용 build.gradle이 가진 plugins,repositories,dependencies,application 메서드이다.
+우리가 Gradle Task를 이용해 java application을 빌드하게 되면 build task는 이 메서드들을 수행시킨다.
+
+
+dependencies {
+	testImplementation ~
+}
+
+{}로 감싸여진 부분은 메서드의 인자로 받아지는 Groovy의 클로저인데 java나 kotlin의 람다와 같다.
+
+
+* 커스텀 프로퍼티 만들기
+
+커스텀 프로처티를 만들기 위해서는 project 객체의 extension에 넣는 방식을 사용한다
+
+----------------------------------------------------------------------------------------------------
+
+mavencentral vs jcenter 차이
+    - repositories 각종 의존성(라이브러리)들을 어떤 원격 저장소에서 받을지를 정해준다.
+       mavenCentral은 이전부터 많이 사용하는 저장소지만, 본인이 만든 라이브러리를 업로드하기 위해서는 많은 과정과 설치가 필요함.
+       이를 보완한게 jcenter
+      jcenter는 최대 java 저장소이고 jcenter를 많이 사용하는 추세
