@@ -22,6 +22,9 @@
         - git reset --hard origin/master
         - git pull origin master
 
+    * reset 명령어
+        - git reset --hard {커밋id}
+
 ** postgresql 명령어
     - psql -V (버전확인)
     - psql -U postgres (psql 접속 방법)
