@@ -26,7 +26,7 @@
         - git reset --hard {커밋id}
 
     * commit 체리픽
-       - git cherry-pick {커밋 해시}
+       - git cherry-pick {커밋 해시} 
 
 ** postgresql 명령어
     - psql -V (버전확인)
