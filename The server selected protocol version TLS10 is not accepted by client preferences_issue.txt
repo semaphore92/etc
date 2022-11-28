@@ -1,0 +1,33 @@
+* 환경
+  - 세아웍스 
+      OpenJDK 11
+      SpringFramework 5.2.7
+  
+  - 세아특수강
+      SQL SERVER (버전 모름)
+
+
+* 발생 
+    JDBC를 이용하여 세아특수강 DB에 접급하려고 함
+    그리고 Java Console에 다음과 같은 에러 발생
+
+드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 SQL Sever로 보안 연결을 설정할 수 없습니다. 
+오류: "The server selected protocol version TLS10 is not accepted by client preferences [TLS13, TLS12]". ClientConnectionId:1b46d55a-a5a8-42d5-b646-c683c8df507a
+
+
+
+* 조치1    ( 나는 여기까지 해서 해결함) 
+    TLS 버전 제거
+    https://kr1json.github.io/post/the-server-selected-protocol-version-tls-is-not-accepted-by-client-preferences/
+
+
+* 조치2    (JAVA 버전이 제대로 설정되어있는지 확인)
+    환경변수 확인 
+    java -version 확인
+
+* 조치3 IDE 확인
+   이클립스의 JAVA 설정 확인   
+   이클립스 위치 확인 (C:로 옮겨줌 해결)
+ 
+  
+    
