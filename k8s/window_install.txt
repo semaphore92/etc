@@ -1,0 +1,9 @@
+** k8s window Install
+
+1. window docker Install
+   - wsl2 설치
+      
+
+1. minikube install
+   https://minikube.sigs.k8s.io/docs/start/  
+ 
