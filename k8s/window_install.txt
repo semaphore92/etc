@@ -1,8 +1,17 @@
 ** k8s window Install
 
 1. window docker Install
-   - wsl2 설치
-      
+   * wsl2 설치
+       - wsl --install -d Ubuntu
+    
+   * wsl2 Ubuntu 실행 시 WslRegisterDistribution failed with error: 0x800701bc 에러
+       - Linux 커널 업데이트 별도 설치  
+         https://learn.microsoft.com/ko-kr/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package  
+
+   * System has not been booted with systemd as init system (PID 1). Can't operate. Failed to connect to bus: Host is down 에러
+       - 특권을 갖지(privileged) 못한 컨테이너라서 발생하는 문제 /sys/fs/cgroup에 대해서 공유가 필요
+       https://wiki.terzeron.com/OS_%EC%9D%BC%EB%B0%98_%EC%8B%9C%EC%8A%A4%ED%85%9C/Docker/container%EC%97%90%EC%84%9C_systemctl_%EB%AA%85%EB%A0%B9_%EC%82%AC%EC%9A%A9%EC%8B%9C_Failed_to_get_D-Bus_connection_Operation_not_permitted_%EC%97%90%EB%9F%AC_%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
+
 
 1. minikube install
    https://minikube.sigs.k8s.io/docs/start/  
