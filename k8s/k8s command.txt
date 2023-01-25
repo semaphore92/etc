@@ -1,0 +1,15 @@
+** k8s 기초 명령어
+
+ (도커 허브에서 nginx 이미지를 가져오는 법)
+    - kubectl run nginx --image nginx
+
+ (Pods 리스트 조회)
+    - kubectl get pods
+
+(yml 파일을 통하여 pod 생성)
+    - kubectl create -f pod-definition.yml
+
+(pods의 상세정보를 확인할때)
+    - kubectl describe pod {myapp-pod}
+
+--------------------------------------------------------------------------------------------------------------------
