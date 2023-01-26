@@ -12,4 +12,7 @@
 (pods의 상세정보를 확인할때)
     - kubectl describe pod {myapp-pod}
 
+(deployment delete) 
+     - kubectl delete deployment {image_name}
+
 --------------------------------------------------------------------------------------------------------------------
