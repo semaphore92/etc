@@ -9,3 +9,55 @@ spec:
   containers:
     - name: nginx-container
       image: nginx
+
+
+
+---- ReplicationController
+
+apiVersion: v1
+kind: Replicationcontroller
+metadata:
+	name: myapp-rc
+	labels:
+		app: myapp
+		type: front-end
+spec:
+	template:
+		metadata:
+  			name: myapp-pod
+  			labels:
+    				app: myapp
+    				type: front-end
+		spec:
+  			containers:
+    			- name: nginx-container
+      			image: nginx
+	replicas: 3
+
+
+---- ReplicationSet
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+	name: myapp-replica
+	lables:
+		app: myapp
+		type: front-end
+spec:
+	template:
+		metadata:
+  			name: myapp-pod
+  			labels:
+    				app: myapp
+    				type: front-end
+		spec:
+  			containers:
+    			- name: nginx-container
+      			image: nginx
+	replicas: 3
+	selector:
+		matchLabels:
+			type: front-end
+	
+		
