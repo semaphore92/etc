@@ -19,6 +19,7 @@
 
 (pod delete)
     - kubectl delete pod webapp
+    - k delete rs {replicaSet_Name}
 
 (deployment delete) 
      - kubectl delete deployment {image_name}
@@ -44,6 +45,9 @@
 (replicaset scale 증가)
      - kubectl scale --replicas=6 -f replicaset-definition.yml
      - kubectl scale --replicas=6 replicaset myapp-replicaset
+
+(replicaset edit으로 변경)
+     - k edit rs {replicaset_name}
 
 
    
