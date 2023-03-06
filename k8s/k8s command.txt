@@ -43,7 +43,13 @@
 (replicaset scale 증가)
      - kubectl scale --replicas=6 -f replicaset-definition.yml
      - kubectl scale --replicas=6 replicaset myapp-replicaset
+--------------------------------------------------------------------------------------------------------------------
+** namespace
+    (default namespace를 기본적으로 dev namespace(임의) 고정으로 바꿀때
+     - k config set-context $(k config current-context) --namespace=dev
 
+     (모든 space의 pods를 조회할 때)
+    - k get pods --all-namespaces
 (replicaset edit으로 변경)
      - k edit rs {replicaset_name}
 
