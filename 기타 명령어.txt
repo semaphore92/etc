@@ -27,6 +27,10 @@
 
     * commit 체리픽
        - git cherry-pick {커밋 해시} 
+  
+    * 체리픽 원복
+           - git cherry-pick --abort
+
 
 ** postgresql 명령어
     - psql -V (버전확인)
