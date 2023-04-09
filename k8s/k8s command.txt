@@ -86,5 +86,21 @@ expose 명령어를 사용하여 Service 객체를 만들 수 있다. Service는
 
 --dry-run=client : 만료될수있어서 --dry 대신 앞에걸씀
 
+---------------------------config map ---------------------------------
 
+(config map list 조회)
+       - k get configmaps
+
+
+(config map 상세조회)
+     - k describe configmaps
+
+(configmap Imperative create command)
+       - k create configmap {config-name} --from-literal={key}={vale} 
+
+(configmap add config)
+	- k create configmap {config-name} --from-literal={key}={vale} \ --from-literal={key}={vale} 
+
+(configmap set file path )
+      - k create configmap {config-name} --from-file={file_path}
    
