@@ -33,6 +33,10 @@
 
 (pod 강제 변경)
      - k replace  --force -f /tmp/*.yaml
+
+
+(이미 생성된 pod 설정을 yaml 파일로 가져오기)
+        - k get pod {image_name} -o yaml > pod.yaml
 --------------------------------------------------------------------------------------------------------------------
 
 (replication controller 생성)
