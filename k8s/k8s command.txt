@@ -37,6 +37,9 @@
 
 (이미 생성된 pod 설정을 yaml 파일로 가져오기)
         - k get pod {image_name} -o yaml > pod.yaml
+
+(kube-system에 떠있는 pods 조회)
+	  - k get pods -n kube-system
 --------------------------------------------------------------------------------------------------------------------
 
 (replication controller 생성)
@@ -107,4 +110,14 @@ expose 명령어를 사용하여 Service 객체를 만들 수 있다. Service는
 
 (configmap set file path )
       - k create configmap {config-name} --from-file={file_path}
+
+
+---------------------------secret ---------------------------------
+(secret 조회)
+	- k get secrets
+	- k get secret {secret_name} -o yaml
+(secret 생성)
+	- k create secret generic {secret-name} --from-literal={key}={value}
+	- k create secret generic {secret-name} --from-file={file_path} 
+
    
