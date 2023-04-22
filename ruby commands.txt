@@ -1,0 +1,1 @@
+start command prompt with ruby -> C:\workspace\semaphore92.github.io -> jekyll serve
