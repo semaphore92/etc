@@ -120,6 +120,14 @@ expose 명령어를 사용하여 Service 객체를 만들 수 있다. Service는
 	- k create secret generic {secret-name} --from-literal={key}={value}
 	- k create secret generic {secret-name} --from-file={file_path} 
 
+---------------------------security context ---------------------------------
+
+(pod를 실행한 user를 알고 싶을 때)
+     - k exec {image_name} -- whoami
+
+(security context 적용)
+	- k apply -f {file_name}
+
    
 
 ---------------------------service account ---------------------------------
