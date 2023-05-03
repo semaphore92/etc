@@ -142,3 +142,6 @@ expose 명령어를 사용하여 Service 객체를 만들 수 있다. Service는
 
 ★ 1.24 버전 부터 service account 생성 시 token이 자동 생성되지 않음, 그래서 토큰을 직접 생성해줘야함
 	- k create token {service account name}
+
+(service account 교체)
+	- k set sa deploy/{deployment_name} {account_name}
